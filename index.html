@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Google Drive Manager</h1>
+
+    <button id="authorize_button" class="hidden">Authorize</button>
+    <button id="signout_button" class="hidden">Sign Out</button>
+
+    <!-- Manager Control Panel -->
+    <div id="manager_panel" class="hidden">
+        <h2>Manager Panel</h2>
+        <h3>Add Authorized Agent</h3>
+        <input type="text" id="agent_name" placeholder="Agent Name">
+        <input type="email" id="agent_email" placeholder="Agent Email">
+        <button id="add_agent">Add Agent</button>
+
+        <h3>Authorized Agents</h3>
+        <ul id="agent_list"></ul>
+    </div>
+
+    <!-- Agent Download Section -->
+    <div id="download_section" class="hidden">
+        <h2>Download Files</h2>
+        <ul id="download_list"></ul>
+    </div>
+
+    <script src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer onload="gisLoaded()"></script>
+    <script src="script.js"></script>
+</body>
+</html>
